@@ -1,0 +1,34 @@
+@import './mixin';
+@import './header';
+@import './footer';
+@import './general';
+@import './elementor';
+
+.alternis-main {
+  &-wrapper {
+    min-height: 100vh;
+    position: relative;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+
+    &>div {
+      flex: 1;
+    }
+  }
+}
+
+#alternis-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 998;
+  background-color: #12121273;
+  transition: visibility 450ms ease, opacity 450ms ease;
+  opacity: 0;
+  visibility: hidden;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}

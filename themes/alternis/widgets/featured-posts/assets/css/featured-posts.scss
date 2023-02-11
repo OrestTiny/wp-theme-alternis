@@ -1,0 +1,58 @@
+@import "../../../../assets/css/mixin";
+@import "../../../../assets/css/vars";
+
+.alternis-featured-posts {
+  display: flex;
+  gap: 40px;
+
+  @include xl-size-max {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  @include sm-size-max {
+    gap: 20px;
+  }
+
+  a {
+    font-size: 13px;
+    line-height: inherit;
+    color: $pr;
+  }
+
+
+  &__item {
+    display: flex;
+    flex: 0 1 calc(25% - 30px);
+    gap: 20px;
+
+    @include xl-size-max {
+      flex: 0 1 calc(50% - 15px);
+    }
+
+    @include sm-size-max {
+      flex: 0 1 100%;
+    }
+  }
+
+  &__heading {
+    &>a {
+      color: $ac;
+    }
+  }
+
+  &__img {
+    height: 115px;
+    width: 115px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.elementor-widget-text-editor {
+  .elementor-widget-container {
+    font-family: var(--font-family);
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  ul {
+    margin-left: 18px;
+
+    li {
+      list-style: outside;
+      font-weight: 300;
+    }
+  }
+}

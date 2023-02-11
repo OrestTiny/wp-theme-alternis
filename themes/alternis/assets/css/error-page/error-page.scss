@@ -1,0 +1,97 @@
+@import '../mixin';
+@import '../vars';
+
+
+.error404 {
+	background-color: $dark;
+
+	.alternis-header,
+	.alternis-footer {
+		display: none;
+	}
+}
+
+.alternis-error {
+	&--wrap {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 100px 20px;
+		position: relative;
+		text-align: center;
+		color: $light;
+	}
+
+	&--small-title {
+		color: $light;
+		font-weight: 600;
+		line-height: 1;
+		font-size: 160px;
+		margin-bottom: 15px;
+
+		@include sm-size-max {
+			font-size: 120px;
+		}
+
+		@media only screen and (max-width: 600px) {
+			font-size: 60px;
+		}
+
+	}
+
+	&--big-title {
+		line-height: 1;
+		font-size: 250px;
+		margin: 0;
+		position: absolute;
+		top: 50%;
+		font-weight: 600;
+		z-index: -1;
+		opacity: .3;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		color: $light;
+
+		@include xl-size-max {
+			font-size: 150px;
+		}
+
+		@include md-size-max {
+			font-size: 90px;
+		}
+	}
+
+	&--title {
+		margin-bottom: 60px;
+		line-height: 1.3;
+
+		@include sm-size-max {
+			margin-bottom: 50px;
+		}
+
+		@media only screen and (max-width: 600px) {
+			margin-bottom: 25px;
+		}
+
+	}
+
+	&--button {
+		display: inline-block;
+		padding: 10px 25px;
+		line-height: 1.5;
+		border: none;
+		color: $light;
+		cursor: pointer;
+		font-weight: 600;
+		transition: all .3s ease;
+		border: 1px solid $light;
+		font-size: 18px;
+		text-transform: uppercase;
+
+		&:hover {
+			color: $ac;
+			border-color: $ac;
+		}
+	}
+}
